@@ -1,0 +1,16 @@
+{
+  "name": "gcore",
+  "version": "0.0.1",
+  "description": "induce core files from inside the node process",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bindings": "~1.1.1"
+  },
+  "devDependencies": {},
+  "repository": "git://github.com/tjfontaine/node-gcore",
+  "author": "Timothy J Fontaine <tjfontaine@gmail.com>",
+  "license": "MIT"
+}
