@@ -8,7 +8,7 @@ consistency reasons the method should be synchronous.
 ## Usage
 
  * `gcore(filename)`
-     - Will ***SYNCHRONOUSLY*** produce a corefile wiht the name `filename`
+     - Will ***SYNCHRONOUSLY*** produce a corefile with the name `filename`
      - Returns `true`/`false` if it was able create a core file
 
 ```javascript
