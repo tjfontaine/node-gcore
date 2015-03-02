@@ -1,6 +1,6 @@
 {
   "name": "gcore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "induce core files from inside the node process",
   "main": "index.js",
   "directories": {
