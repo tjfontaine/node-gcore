@@ -5,6 +5,7 @@
       'library': 'static_library',
       'type': 'static_library',
       'cflags': [ '-fPIC' ],
+      'defines': [ '_GNU_SOURCE', ],
       'sources': [
         'src/coredumper.c',
         'src/coredumper.h',
