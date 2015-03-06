@@ -43,6 +43,7 @@ extern "C" {
 #include <signal.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/prctl.h>
 #include <sys/socket.h>
 #include <sys/wait.h>
 
@@ -604,6 +605,8 @@ int ListAllProcessThreads(void *parameter,
     int clone_errno;
     clone_pid = local_clone((int (*)(void *))ListerThread, &args);
     clone_errno = errno;
+
+    sys_prctl(PR_SET_PTRACER, clone_pid);
 
     sys_sigprocmask(SIG_SETMASK, &sig_old, &sig_old);
 
