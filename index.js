@@ -11,7 +11,12 @@ exports.gcore = function(name) {
     return false;
   }
 
-	var ret = binding.gcore(name);
+  var ret = binding.gcore(name);
 
-  return ret === 0 ? true : false;
+  if (ret === 0) {
+    return true;
+  } else {
+    console.trace("Core file failed to be created with errno: %d", ret);
+    return false;
+  }
 };

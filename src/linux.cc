@@ -19,10 +19,15 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+#include <errno.h>
+
 #include "google/coredumper.h"
 
 int
 do_core(const char* fname)
 {
-	return WriteCoreDump(fname);
+  int ret = WriteCoreDump(fname);
+  if (ret == -1)
+    ret = errno;
+  return ret;
 }
