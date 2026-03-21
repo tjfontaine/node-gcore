@@ -1,3 +1,5 @@
+> **⚠️ This project is archived and no longer maintained.**
+
 ## node-gcore
 
 A small module to induce core files from inside a node process.
